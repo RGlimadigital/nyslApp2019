@@ -1,0 +1,819 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald|Roboto');
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    background: url(images/soccer.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    height: 736px;
+}
+
+
+
+
+/*Home Page */
+
+header {
+    width: 100%;
+}
+
+.contain-logo {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%:
+}
+
+.logos {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+.nysl-name {
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+
+.logo {
+    width: 80px;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 10px;
+}
+
+.logo-name {
+    padding-top: 20%;
+    width: 120px;
+    height: auto;
+    align-self: baseline;
+
+
+}
+
+
+
+
+
+.hamburger-logo {
+    width: 60px;
+}
+
+/*Sectio 8*/
+
+.titulo {
+    margin: 1%;
+}
+
+.titulo h2 {
+    margin-bottom: 0px;
+}
+
+.show-dates {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+}
+
+dates {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 0;
+}
+
+.date {
+    font-family: impact;
+    font-size: 2em;
+    padding: 10px;
+    margin-left: 2px;
+    border: 3px solid black;
+    border-radius: 10px;
+    margin-top: 0px;
+}
+
+
+.info-dates {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+
+}
+
+
+.allgames {
+
+
+    height: 470px;
+    width: 100%;
+    overflow: scroll;
+
+}
+
+h2 {
+    margin-top: 5%;
+    margin: 0;
+    margin-left: 1%;
+    width: 100%;
+    font-family: roboto;
+
+}
+
+.equip-name {
+    margin-top: 0px;
+}
+
+.time-info {
+    margin-top: 0;
+    padding: 0;
+    display: flex;
+    font-family: impact;
+    font-size: 1.6em;
+    height: 1.6em;
+}
+
+.time-title {
+    margin-top: 0px;
+    margin-left: 5px;
+}
+
+.time {
+    margin-top: 0px;
+    margin-left: 5px;
+}
+
+.date-direction {
+    padding: 0;
+    margin: 0;
+}
+
+.direction {
+    margin-top: 0;
+    font-family: roboto;
+    font-size: 16px;
+}
+
+.main-info {}
+
+.division {
+    width: 80%;
+}
+
+.link a {
+    position: absolute;
+    right: 5px;
+    text-decoration: none;
+    font-family: roboto;
+    font-size: 20px;
+    font-weight: bolder;
+    color: #fff;
+    text-transform: uppercase;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    padding: 5px;
+    text-shadow: 2px 2px 2px #333;
+}
+
+
+links {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.link {
+    height: 2em;
+    position: relative;
+}
+
+link p {
+    position: relative;
+    height: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.link-chat {
+    margin-top: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.link-text {
+    font-family: roboto;
+    font-weight: bolder;
+    font-size: 2em;
+    color: #fff;
+    text-shadow: 2px 2px 2px #333;
+
+}
+
+.link-text p {
+    margin: 0;
+}
+
+
+
+
+/*Display none */
+
+/*Game Info */
+
+.tituloGf {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.tituloGf h2 {
+    width: 40%;
+    font-size: 2em;
+}
+
+.tituloGf .x {
+    width: 10%;
+    font-size: 2em;
+    font-family: 'Oswald', sans-serif;
+}
+
+
+.gameCalendar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/* Icone Calendario */
+
+
+
+.celendaricon {
+
+
+    width: 20%;
+}
+
+.fa-calendar-alt {
+    font-size: 50px;
+    text-align: center;
+    height: auto;
+    width: 100%;
+    text-shadow: 5px 5px 5px #eee;
+    color: #2d9f1a;
+
+}
+
+.dateGf {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+}
+
+
+
+.dateGf .p1 {
+    font-family: impact;
+    font-size: 1em;
+}
+
+.dateGf .p2 {
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2em;
+    margin: 2px 0 2px 0;
+}
+
+.estadiotext {
+    width: 70%;
+    font-family: impact;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+
+}
+
+.estadioAddress {
+    display: flex;
+    flex-direction: row;
+}
+
+.estadio {
+    font-size: 16px;
+    font-weight: 900;
+}
+
+.mapaEstadio {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.divisionmaps {
+    width: 80%;
+}
+
+
+/* ----------Estadios---------------*/
+
+
+.estadiosCont {
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    margin-bottom: 20px;
+    margin-top: 10px;
+
+
+}
+
+.estadiomaps {
+    width: 35%;
+    height: 100%;
+
+}
+
+.estadioAddress p {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.direction i {
+    margin: 5px;
+    color: red;
+}
+
+.allEstadios {
+    overflow: scroll;
+    height: 430px;
+}
+
+.estadiomaps iframe {
+    padding: 5px;
+}
+
+/*---Main Estadio ------- */
+
+
+
+.estadioh2 {
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 2em;
+    color: #406723;
+}
+
+.estadio {
+    font-family: sans-serif;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.red {
+    color: red;
+}
+
+.estadiocomplete {
+    width: 100%;
+    height: 450px;
+}
+
+/*----Chat----------------*/
+
+.chat {
+    margin: 0;
+    padding: 0px
+}
+
+.mainchat {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.chatlogochat {
+    margin: 0;
+    padding: 0;
+}
+
+.link-text .jchat {
+    margin: 0;
+    padding: 0;
+    color: #27cf00;
+}
+
+.chatbody {
+    width: 100%;
+    height: 300px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.TextBox {
+    width: 100%;
+    height: 280px;
+    background: #fff;
+    border: 3px solid green;
+    border-radius: 10px;
+    overflow: scroll;
+    font-family: sans-serif;
+    font-size: 1em;
+    margin: 0 0 0 10px;
+    background: url('images/background.png');
+    background-size: cover;
+
+}
+
+.inputtext {
+    margin: 3%;
+    padding: 0;
+    width: 100%;
+    height: 2em;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+
+}
+
+.input {
+    width: 65%;
+    height: 3em;
+
+}
+
+.texto {
+    width: 100%;
+    font-size: 1.5em;
+    outline: none;
+    color: forestgreen;
+    border-radius: 5px;
+}
+
+.textbtn {
+    width: 30%;
+}
+
+.textbtn p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.enviar a {
+    position: absolute;
+    right: 5px;
+    text-decoration: none;
+    font-family: roboto;
+    font-size: 20px;
+    font-weight: bolder;
+    color: #fff;
+    text-transform: uppercase;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    padding: 5px;
+    text-shadow: 2px 2px 2px #333;
+}
+
+
+.chatcontainer {
+    margin: 0;
+    background: #27ae60;
+    color: #fff;
+    padding: 5px;
+    width: fit-content;
+    align-self: flex-end;
+
+
+}
+
+.chatcontainer p {
+    margin: 0;
+}
+
+.direita {
+    text-align: right;
+    margin-right: 10px;
+}
+
+.mensagem {
+    background: #ecf0f1;
+    border-radius: 5px;
+    margin: 0;
+    padding: 10px;
+    font-size: 20px;
+    width: fit-content;
+    align-self: flex-end;
+    background: #2c3e50;
+    color: #fff;
+}
+
+.flexcont {
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/*--Menu ---*/
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-content: flex-end;
+
+}
+
+.contenedor {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    right: 10px;
+    top: 70px;
+
+}
+
+a {
+    padding: 20px;
+    text-decoration: none;
+    background: #27ae60;
+    color: #fff;
+    font-family: roboto;
+    border: 2px solid #fff;
+    border-radius: 10px;
+}
+
+a:active {
+    background: #c23616;
+    color: #fff;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity .5s;
+}
+
+.fade-enter,
+.fade-leave-to
+
+/* .fade-leave-active below version 2.1.8 */
+    {
+    opacity: 0;
+
+}
+
+.logOut {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    margin-top: 25%;
+}
+
+
+
+
+
+.logOut a {
+
+
+    text-decoration: none;
+    font-family: roboto;
+    font-size: 20px;
+    font-weight: bolder;
+    color: #fff;
+    text-transform: uppercase;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    padding: 5px;
+    text-shadow: 2px 2px 2px #333;
+    background: #e84118;
+}
+
+/*-------MEDIA QUERYS --------*/
+
+/*----Iphone Modo Paisagem -----*/
+
+@media(min-width: 600px) {
+
+
+    .main-info .primero {
+        height: 150px;
+        overflow: scroll;
+        width: 90%;
+    }
+
+    .contain-logo {
+        height: 100px;
+    }
+
+    .link-chat {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        height: 50px;
+        margin-top: 0px;
+
+
+
+    }
+
+    /*--Todos los partidos---*/
+
+    .allgames {
+        height: 150px;
+    }
+
+    .allEstadios {
+        height: 150px;
+    }
+
+    .mainEstadio {
+        height: 200px;
+        overflow: scroll;
+    }
+
+
+}
+
+
+@media(max-height: 375px) {
+    body {
+        height: 375px;
+    }
+
+    .logOut {
+        margin-top: 0;
+    }
+
+    .mainchat {
+        height: 200px;
+        overflow: scroll;
+    }
+
+    .TextBox {
+        height: 80px;
+
+
+    }
+
+    .jchat {
+        display: none;
+    }
+}
+
+@media(min-height: 800px) {
+    .main-info .primero {
+        margin-bottom: 50px;
+    }
+}
+
+@media(min-width: 800px) {
+    body {
+        width: 90%;
+        height: 375px;
+        margin-left: 5%;
+
+    }
+
+    .link-text {
+        color: #f1c40f;
+    }
+}
+
+
+/*------Ipad----------*/
+
+@media(min-height: 1000px) {
+
+    .main-info .primero {
+        height: 600px;
+    }
+
+    .gameCalendar {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        margin-left: 25%;
+
+    }
+
+    .mapaEstadio iframe {
+        width: 500px;
+        height: 500px;
+        margin: 0 auto;
+    }
+
+    .allgames {
+        height: 600px;
+    }
+
+    .allEstadios {
+        height: 600px;
+    }
+
+    .estadiomaps {
+        width: auto;
+    }
+
+    .estadiomaps iframe {
+        width: 200px;
+        height: 200px;
+    }
+
+    .link a {
+        top: 170px;
+    }
+
+    .mainchat {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        margin-top: 10%;
+        padding: 0;
+    }
+
+    .chat {
+        height: 700px;
+        margin: 0;
+        padding: 0px;
+    }
+
+}
+
+@media(min-width: 786px) {
+    /*
+    .main-info .primero {
+        height: 400px;
+
+    }
+*/
+
+    .gameCalendar {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        margin-left: 25%;
+
+    }
+
+    .mapaEstadio iframe {
+        width: 500px;
+        height: 300px;
+        margin: 0 auto;
+    }
+
+    /*----- CHAT ------*/
+
+    .TextBox {
+        width: 80%;
+    }
+
+
+
+
+
+
+
+}

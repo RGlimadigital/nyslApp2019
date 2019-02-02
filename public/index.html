@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" href="css/images/nysl_logo.png">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="apple-mobile-web-app-title" content="NYSL">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="style/Appstyle.css">
+    <link rel="shortcut icon" sizes="196x196" href="icon-196x196.png">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+
+    <title>NYSL-2019</title>
+</head>
+
+<body>
+    <div id="vue-app">
+        <header>
+           
+            <div class="model-hearder">
+                <div class="contain-logo">
+                    <div class="logos">
+                        <div class="nysl-logo">
+                            <figure>
+                                <img class='logo' src="style/images/nysl_logo.png" alt="" @click='telainicial()'>
+                            </figure>
+
+                        </div>
+                        <div class="nysl-name">
+                            <figure class="nysl-name">
+                                <img class="logo-name" src="style/images/Nysl-logo.png" alt="" @click='telainicial()'>
+                            </figure>
+
+                        </div>
+                    </div>
+
+                    <div class="menu-logo">
+                        <figure>
+                            <img class="hamburger-logo" src="style/images/menu-logo1.png" alt="hamburger" @click='menu = !menu'>
+                        </figure>
+                    </div>
+                   
+                </div>
+            </div>
+
+
+
+
+        </header>
+         <transition name="fade">
+         <nav v-show='menu'>
+                      
+                        <div class="contenedor">
+                           <a href="#" @click='tagLink()' data-tag='agendaGames'>TODOS LOS PARTIDOS</a>
+                            <a href="#" data-tag='allmaps' @click='tagLink()'> ESTADIOS</a>
+                        </div>
+             
+                       
+                        
+                        
+                        
+                    </nav>
+                    </transition>
+
+
+        <section class="main-info" v-show='showInitial'>
+
+            <article class="primero">
+                <div class="titulo">
+                    <h2>Proximos partidos:</h2>
+                    <hr>
+
+                </div>
+
+                <div class="show-dates" v-for="(info, index) in homeInfo" :data-id='index' @click='getid()'>
+
+                    <div class="dates">
+                        <p class="date" id="date1">{{info.data.slice(0,5)}}</p>
+
+
+
+
+                    </div>
+                    <div class="info-dates">
+                        <div class="equip-name">
+                            <h2> <span><i class="fas fa-futbol"></i> </span> {{info.equipe01}} x {{info.equipe02}}</h2>
+
+                        </div>
+                        <div class="time-info">
+                            <p class="time-title"><span><i class="far fa-clock"></i></span> <b>TIME: {{info.Horario}}</b></p>
+                            <p class="time"></p>
+
+                        </div>
+                        <div class="date-direction">
+                            <p class="direction"><i class="fas fa-map-marker-alt"></i> <b>Estadio:</b> {{info.estadio}}</p>
+
+
+                        </div>
+
+
+
+
+                    </div>
+
+
+                </div>
+
+            </article>
+
+
+
+
+
+
+            <hr class="division">
+            <div class="link">
+                <p><a href="#" @click='todoslospartidos()'data-tag='showInitial'>Todos los partidos <i class="fas fa-arrow-circle-right"></i></a></p>
+            </div>
+
+
+
+            <div class="link-chat">
+                <div class="link-text" @click='startDataBase()'>
+                    <p>NYSL-CHAT <i class="fas fa-comments"></i></p>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+        </section>
+
+
+
+
+
+
+
+
+        <section class="agenda" v-if='agendaGames'>
+
+            <article class="primero">
+                <div class="titulo">
+                    <h2>Todos los Partidos:</h2>
+                    <hr>
+
+                </div>
+
+                <div class="allgames">
+                    <div class="show-dates myid" v-for="(item, index) in mainInfo" :data-id='index' @click.prevent.self='chnageDisplays()'>
+
+                        <div class="dates">
+                            <p class="date"> {{item.data.slice(0,5)}}</p>
+
+
+
+
+                        </div>
+                        <div class="info-dates">
+                            <div class="equip-name">
+                                <h2> <span><i class="fas fa-futbol"></i> </span> {{item.equipe01}} x {{item.equipe02}} </h2>
+
+                            </div>
+                            <div class="time-info">
+                                <p class="time-title"><span><i class="far fa-clock"></i></span><b>TIME: {{item.Horario}} </b> </p>
+                                <p class="time"></p>
+
+                            </div>
+                            <div class="date-direction">
+                                <p class="direction"><i class="fas fa-map-marker-alt"></i> <b>Estadio:</b> {{item.estadio}} </p>
+
+
+
+
+                            </div>
+
+
+
+
+                        </div>
+
+
+                    </div>
+                    <hr class="division">
+
+
+
+                </div>
+
+
+            </article>
+            <div class="link">
+                <p><a href="#" @click='todoslospartidos()'>Inicio <i class="fas fa-arrow-circle-right"></i></a></p>
+            </div>
+
+
+        </section>
+
+
+
+
+
+        <section class="gameInfo" v-show='gameInfo'>
+
+            <article class="primero">
+                <div class="tituloGf">
+                    <h2>{{selectedMatch.equipe01}}</h2>
+                    <h2 class='x'>X</h2>
+                    <h2>{{selectedMatch.equipe02}}</h2>
+                    <hr>
+
+                </div>
+                <hr class="division">
+
+
+
+                <div class="gameCalendar">
+                    <div class="celendaricon">
+                        <i class="far fa-calendar-alt" width></i>
+                    </div>
+
+                    <div class="dateGf">
+
+                        <p class="p2"><b>Horário -</b> {{selectedMatch.Horario}}</p>
+                        <p class="p2"><b>Data -</b> {{selectedMatch.data}}</p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="gameEstadio gameCalendar">
+                    <div class="celendaricon">
+                        <i class="fas fa-map-marked-alt   fa-calendar-alt"></i>
+                    </div>
+
+
+
+
+                    <div class="estadioAddress"></div>
+                    <p class="estadiotext"><b>Estadio - </b> {{selectedMatch.estadio}} <br>
+                        <span class="estadio"> {{selectedMatch.direccion}} </span></p>
+
+                </div>
+
+                <hr class="divisionmaps">
+
+                <div class="mapaEstadio">
+
+                    <iframe :src="estadioUrl" width="300" height="220" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+                </div>
+
+
+
+
+
+
+
+
+
+
+            </article>
+           <div class="links">
+                <div class="link">
+                <p><a href="#" @click='agendaGames = !agendaGames; gameInfo = !gameInfo '>Todos los Partidos <i class="fas fa-arrow-circle-right"></i></a></p>
+            </div>
+            <div class="link">
+                <p><a href="#" @click='showInitial = !showInitial; gameInfo = !gameInfo '>Inicio <i class="fas fa-arrow-circle-right"></i></a></p>
+            </div>
+           
+
+           </div>
+        </section>
+
+
+        <section class="allmaps" v-show="allmaps">
+            <div class="titulo">
+                <h2>Todos los Estadios:</h2>
+                <hr>
+
+            </div>
+            <div class="allEstadios">
+                <div class="estadiosCont" v-for="(estadio, index) in estadios" :data-idest='index'>
+                    <div class="estadiomaps" @click='createEstadios();' :data-idest='index'>
+                        <iframe :src="estadio.MapsApi" width="120" height="80px" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+
+                    </div>
+                    <div class="estadioInfo" :data-idest='index' @clickprevent.self='createEstadios();'>
+                        <div class="estadioname">
+                            <h2 :data-idest='index' @click='createEstadios();'>{{estadio.nombre}}</h2>
+                            <hr>
+                        </div>
+                        <div class="estadioAddress">
+                            <p class="direction"><i class="fas fa-map-marker-alt"></i>
+                                <p :data-idest='index' @click='createEstadios();'> {{estadio.direccion}} </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="link">
+                <p><a href="#" @click='allmaps = !allmaps; showInitial = !showInitial'>Inicio <i class="fas fa-arrow-circle-right"></i></a></p>
+            </div>
+
+
+
+
+
+
+
+
+
+
+        </section>
+
+        <section class="estadioInfo" v-if='estadioInfo'>
+
+
+            <article class="mainEstadio">
+                <div class="tituloEstadio">
+                    <h2 class="estadioh2">{{mainEstadio.nombre}}</h2>
+
+
+
+                </div>
+                <hr class="division">
+
+                <div class="estadiocomplete">
+                    <div class="gameEstadio gameCalendar">
+                        <div class="celendaricon">
+                            <i class="fas fa-map-marked-alt   fa-calendar-alt red"></i>
+                        </div>
+
+
+
+
+                        <div class="estadioAddress"></div>
+                        <p class="estadiotext">
+                            <span class="estadio"> {{mainEstadio.direccion}} </span></p>
+
+                    </div>
+
+                    <hr class="divisionmaps">
+
+                    <div class="mapaEstadio">
+
+                        <iframe :src="mainEstadio.MapsApi" width="300" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+            </article>
+
+            <div class="link">
+                <p><a href="#" @click='listaEstadios()'>Lista Estadios <i class="fas fa-arrow-circle-right"></i></a></p>
+            </div>
+
+
+
+
+
+
+
+
+        </section>
+
+
+
+        <section class="chat" v-if='chat'>
+            <article class="mainchat">
+                <div class="chatlogochat">
+                    <div class="chatlink">
+                        <div class="link-text" @click='startDataBase()'>
+                            <p class='jchat'>NYSL-CHAT <i class="fas fa-comments"></i></p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="chatbody">
+                    <div class="TextBox" id="TextBox">
+                        
+                    </div>
+                    <div class="inputtext">
+                        <div class="input">
+                          <input type="text" class="texto" id='txtvalue'>
+                           
+                            
+                        </div       >
+                        <div class="textbtn">    
+                         <div class="enviar">
+                               <p><a href="#" @click='post()'>Send <i class="fas fa-arrow-circle-right"></i></a></p>
+                         </div>
+                           
+                            
+                        </div>
+                    </div>
+                </div>
+               
+            </article>
+             <div class="logOut">
+                               <p><a href="#" @click='singOutBtn()'>LogOut <i class="fas fa-arrow-circle-right"></i></a></p>
+                         </div>
+
+
+
+        </section>
+
+
+
+        <!--
+        
+        <div class="name"><h1>{{selectedMatch.equipo01}}</h1></div>
+-->
+    </div>
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDhjK_E3ixZs595zjgb8e5k_CpxU3H6oRA",
+    authDomain: "nysl2019.firebaseapp.com",
+    databaseURL: "https://nysl2019.firebaseio.com",
+    projectId: "nysl2019",
+    storageBucket: "nysl2019.appspot.com",
+    messagingSenderId: "228939247149"
+  };
+  firebase.initializeApp(config);
+</script>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="/script/AppScript.js"></script>
+</body>
+
+</html>

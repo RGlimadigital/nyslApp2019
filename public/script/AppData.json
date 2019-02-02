@@ -1,0 +1,150 @@
+{
+    "Partidos": [{
+	"data": "22/01/2019",
+	"Horario": "16:30",
+	"equipe01": "Ubiqum",
+	"equipe02": "Wework",
+	"estadio": "Greenbay Elementary"
+}, {
+	"data": "25/01/2019",
+	"Horario": "09:30",
+	"equipe01": "U2",
+	"equipe02": "U1",
+	"estadio": "AJ Katzenmaier"
+}, {
+	"data": "25/01/2019",
+	"Horario": "13:00",
+	"equipe01": "U3",
+	"equipe02": "U2",
+	"estadio": "Greenbay Elementary"
+}, {
+	"data": "29/01/2019",
+	"Horario": "09:30",
+	"equipe01": "U5",
+	"equipe02": "U6",
+	"estadio": "Howard A Yeagery"
+}, {
+	"data": "29/01/2019",
+	"Horario": "13:30",
+	"equipe01": "U6",
+	"equipe02": "U1",
+	"estadio": "Marjorie P Hart"
+}, {
+	"data": "15/02/2019",
+	"Horario": "09:00",
+	"equipe01": "U3",
+	"equipe02": "U5",
+	"estadio": "North Elementary"
+}, {
+	"data": "15/02/2019",
+	"Horario": "13:00",
+	"equipe01": "U6",
+	"equipe02": "U1",
+	"estadio": "AJ Katzenmaier"
+}, {
+	"data": "22/02/2019",
+	"Horario": "09:00",
+	"equipe01": "U1",
+	"equipe02": "U3",
+	"estadio": "South Elementary"
+}, {
+	"data": "22/02/2019",
+	"Horario": "13:00",
+	"equipe01": "U2",
+	"equipe02": "U6",
+	"estadio": "Howard A Yeagery"
+}, {
+	"data": "01/03/2019",
+	"Horario": "09:30",
+	"equipe01": "U4",
+	"equipe02": "U5",
+	"estadio": "Greenbay Elementary"
+}, {
+	"data": "06/03/2019",
+	"Horario": "09:30",
+	"equipe01": "U2",
+	"equipe02": "U5",
+	"estadio": "Marjorie P Hart"
+}, {
+	"data": "06/03/2019",
+	"Horario": "13:00",
+	"equipe01": "U1",
+	"equipe02": "U6",
+	"estadio": "South Elementary"
+}, {
+	"data": "13/03/2019",
+	"Horario": "09:30",
+	"equipe01": "U3",
+	"equipe02": "U4",
+	"estadio": "Howard A Yeagery"
+}, {
+	"data": "13/03/2019",
+	"Horario": "13:00",
+	"equipe01": "U1",
+	"equipe02": "U5",
+	"estadio": "Greenbay Elementary"
+}, {
+	"data": "20/03/2019",
+	"Horario": "09:30",
+	"equipe01": "U6",
+	"equipe02": "U3",
+	"estadio": "North Elementary"
+}, {
+	"data": "20/03/2019",
+	"Horario": "13:00",
+	"equipe01": "U2",
+	"equipe02": "U4",
+	"estadio": "Marjorie P Hart"
+}, {
+	"data": "27/03/2019",
+	"Horario": "09:30",
+	"equipe01": "U3",
+	"equipe02": "U1",
+	"estadio": "AJ Katzenmaier"
+}, {
+	"data": "27/03/2019",
+	"Horario": "13:00",
+	"equipe01": "U5",
+	"equipe02": "U6",
+	"estadio": "Howard A Yeagery" 
+   
+}  ],
+    "Estadios":[{
+        "nombre": "AJ Katzenmaier",
+        "direccion": "24 W. Walton St., Chicago, IL 60610",
+        "MapsApi": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.654060426165!2d-87.63123908504764!3d41.900296372004675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f6bac3%3A0x68a82e5d59952c86!2s24+W+Walton+St%2C+Chicago%2C+IL+60610%2C+EE.+UU.!5e0!3m2!1ses!2ses!4v1548676105626"
+    },
+    {
+        "nombre": "Greenbay Elementary",
+        "direccion": "1734 N Orleans St Chicago, IL 60614",
+        "MapsApi": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.0256986745358!2d-87.64002798504714!3d41.91380627115896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34073f306a3%3A0x9e1726bbf8f23f0e!2s1734+N+Orleans+St%2C+Chicago%2C+IL+60614%2C+EE.+UU.!5e0!3m2!1ses!2ses!4v1548676257937" 
+    },
+    {
+        "nombre": "Howard A Yeagery",
+        "direccion": "2245 N. Southport Ave., Chicago, IL 60614",
+        "MapsApi": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.585497384681!2d-87.66511458504685!3d41.92326857056623!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd2e37f9b8d2d%3A0x62ad8b907dd755d6!2s2245+N+Southport+Ave%2C+Chicago%2C+IL+60614%2C+EE.+UU.!5e0!3m2!1ses!2ses!4v1548676309652"
+    },
+    {
+        "nombre": "Marjorie P Hart",
+        "direccion": "2625 N. Orchard St., Chicago, IL 60614",
+        "MapsApi": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.2917289530847!2d-87.64808628504656!3d41.929582270170776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd30f2630e551%3A0x3e719e44a5cef714!2s2625+N+Orchard+St%2C+Chicago%2C+IL+60614%2C+EE.+UU.!5e0!3m2!1ses!2ses!4v1548676429104"
+    },
+    {
+        "nombre": "North Elementary",
+        "direccion": "1409 N. Ogden Ave., Chicago, IL 60610",
+        "MapsApi": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.3363025419585!2d-87.64835588504742!3d41.90712867157692!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd33af13a8945%3A0xb6ad1ec2b6f379ba!2s1409+N+Ogden+Ave%2C+Chicago%2C+IL+60610%2C+EE.+UU.!5e0!3m2!1ses!2ses!4v1548676465758"
+    },
+    {
+        "nombre": "South Elementary",
+        "direccion": "2101 N. Fremont St., Chicago, IL 60614",
+        "MapsApi": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.7477648265694!2d-87.65355538504697!3d41.919780770784634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd3196fb41dc7%3A0x970be7f7d6336df5!2s2101+N+Fremont+St%2C+Chicago%2C+IL+60614%2C+EE.+UU.!5e0!3m2!1ses!2ses!4v1548676503863"
+    }],
+    "Contacto":[{
+        "Director": "Michael Randall",
+        "Function": "League Coordinator",
+        "Phone": "(630) 690-8132",
+        "e-mail": "michael.randall@chisoccer.org"
+
+}]
+
+}
