@@ -530,6 +530,10 @@ link p {
     text-align: right;
     margin-right: 10px;
 }
+.esquerda {
+   align-self: flex-start;
+    margin-right: 10px;
+}
 
 .mensagem {
     background: #ecf0f1;
@@ -546,6 +550,7 @@ link p {
 .flexcont {
     padding-bottom: 20px;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: flex-start;
 }

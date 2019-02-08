@@ -203,6 +203,7 @@ let appInfo = new Vue({
             firebase.database().ref('NYSL').on('value', function (data) {
 
                 var userName = firebase.auth().currentUser.displayName;
+                console.log(userName);
                 var posts = document.getElementById("TextBox");
 
                 posts.innerHTML = "";
@@ -211,21 +212,26 @@ let appInfo = new Vue({
 
                 if(userName == 'Rodrigo Guedes'){
                     for (var key in messages) {
+                    var date = new Date();
+                    var hoje = date.toLocaleDateString();
+                    var horas = date.toLocaleTimeString();
                     var textcont = document.createElement('transition');
                     var text = document.createElement("p");
-                    var text2 = document.createElement('p')
+                    var text2 = document.createElement('p');
                     textcont.setAttribute('class', 'flexcont fade');
                     text.setAttribute("class", "chatcontainer direita");
                     text2.setAttribute("class", "mensagem direita");
                     var element = messages[key];
-                    text.append(element.name);
+                    text.append(element.name + ' ' + hoje + ' ' + horas);
                     text2.append(element.body);
                     textcont.append(text);
                     textcont.append(text2);
+                   
                     
                     posts.append(textcont);
                 }
-                }else{
+                }else if(userName != 'Rodrigo Guedes' ){
+                    console.log('Esquerda')
                     for (var key in messages) {
                     var textcont = document.createElement('div');
                     var text = document.createElement("p");
